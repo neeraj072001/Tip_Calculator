@@ -5,11 +5,10 @@ const perPersonTotalDiv = document.getElementById('perPersonTotal')
 let numberOfPeople = Number(numberOfPeopleDiv.innerText)
 const calculateBill = () => {
   const bill = Number(billValue.value)
-  const tipPercent = Number(tipValue.value) / 100
-  const tipAmount = bill * tipPercent
+  const tipAmount = Number(tipValue.value)
   const total = tipAmount + bill
   const perPersonTotal = total / numberOfPeople
-  perPersonTotalDiv.innerText = `$${perPersonTotal.toFixed(2)}`
+  perPersonTotalDiv.innerText = `₹${perPersonTotal.toFixed(2)}`
 }
 const increasePeople = () => {
   numberOfPeople += 1
